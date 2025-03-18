@@ -44,13 +44,20 @@
 
             <!--Inputs for guessing -->
             <div>
-                <input type="text" id="letterInput" maxlength="1" class="form-control">
+                <input type="text" id="letterInput" maxlength="1" class="form-control d-inline-block w-auto text-center"
+                    placeholder="guessLetter">
                 <button id="guessing" class="btn btn-warning" onclick="guessLetter()">Guess</button>
             </div>
-
-
         </div>
 
+        <p id="wrongLetters"></p>
+
+        <img id="shamrock" src="" alt="" class="">
+
+        <!--Wrong guesses-->
+        <div class="mt-4">
+            <button id="restartGame" class="btn btn-danger" onclick="restartGame()">Restart Game</button>
+        </div>
 
     </main>
     <footer>
