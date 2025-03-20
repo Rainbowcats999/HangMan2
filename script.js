@@ -30,8 +30,10 @@ function startGame(level) {
   //Hide Difficulty selection and show game area and difficulty box
 
   //Add d-block to the difficultySelection div
+  document.getElementById("difficultySelection").classList.add("d-none");
 
   //Remove d-none from difficultyBox and gameArea
+  document.getElementById("gameArea").classList.remove("d-none");
 
   //Add d-block to difficultyBox and gameArea
 }
