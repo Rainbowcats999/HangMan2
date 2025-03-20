@@ -29,5 +29,9 @@ function startGame(level) {
 }
 
 function getRandomWord(level) {
-  wordList.filter();
+  let filteredWords = wordList.filter((word) => {
+    if (level === "easy") return word.length <= 4;
+    if (level === "medium") return word.length > 4 && word.length < 8;
+    if (level === "hard") return word.length >= 8;
+  });
 }
