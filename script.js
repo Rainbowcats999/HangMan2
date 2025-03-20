@@ -26,6 +26,14 @@ const maxMistakes = 6;
 
 function startGame(level) {
   selectedWord = getRandomWord(level);
+
+  //Hide Difficulty selection and show game area and difficulty box
+
+  //Add d-block to the difficultySelection div
+
+  //Remove d-none from difficultyBox and gameArea
+
+  //Add d-block to difficultyBox and gameArea
 }
 
 function getRandomWord(level) {
