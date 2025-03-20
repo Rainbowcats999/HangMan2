@@ -1,7 +1,7 @@
 const wordList = [
   "cats",
   "kittens",
-  "dog",
+  "Antidisestablishmentarianism",
   "Supercalifragilisticexpialidocious",
   "Pneumonoultramicroscopicsilicovolcanoconiosis",
   "charm",
@@ -24,4 +24,10 @@ let wrongGuesses = 0;
 let guessedLetters = [];
 const maxMistakes = 6;
 
-function startGame(level) {}
+function startGame(level) {
+  selectedWord = getRandomWord(level);
+}
+
+function getRandomWord(level) {
+  wordList.filter();
+}
