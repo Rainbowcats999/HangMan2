@@ -23,3 +23,5 @@ let displayWord = "";
 let wrongGuesses = 0;
 let guessedLetters = [];
 const maxMistakes = 6;
+
+function startGame(level) {}
