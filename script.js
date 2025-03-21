@@ -28,6 +28,11 @@ function startGame(level) {
   selectedWord = getRandomWord(level);
 
   //create placeholder for the selected word
+  displayedWord = "_".repeat(selectedWord.length);
+  //display the selected word
+  document.getElementById("wordDisplay").textContent = displayedWord
+    .split("")
+    .join("space");
 
   //Update difficulty display box
   updatedifficultyDisplay(level);
