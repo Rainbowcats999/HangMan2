@@ -1,5 +1,8 @@
 body {
   background-image: url(imgs/cat.gif);
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: cover;
 }
 
 h1 {
