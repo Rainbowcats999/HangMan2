@@ -19,13 +19,15 @@ const wordList = [
 
 //setting time variables
 let selectedWord = "";
-let displayWord = "";
+let displayedWord = "";
 let wrongGuesses = 0;
 let guessedLetters = [];
 const maxMistakes = 6;
 
 function startGame(level) {
   selectedWord = getRandomWord(level);
+
+  //create placeholder for the selected word
 
   //Update difficulty display box
   updatedifficultyDisplay(level);
