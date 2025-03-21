@@ -27,7 +27,8 @@ const maxMistakes = 6;
 function startGame(level) {
   selectedWord = getRandomWord(level);
 
-  //Hide Difficulty selection and show game area and difficulty box
+  //Update difficulty display box
+  updatedifficultyDisplay(level);
 
   //Add d-block to the difficultySelection div
   document.getElementById("difficultySelection").classList.add("d-none");
@@ -39,6 +40,8 @@ function startGame(level) {
   //Add d-block to difficultyBox and gameArea
   document.getElementById("gameArea").classList.add("d-block");
   document.getElementById("difficultyBox").classList.add("d-block");
+
+  //select difficulty display box
 }
 
 function getRandomWord(level) {
@@ -50,4 +53,18 @@ function getRandomWord(level) {
 
   //Select and return
   return filteredWords[Math.floor(Math.random() * filteredWords.length)];
+}
+
+function updatedifficultyDisplay(level) {
+  let difficultyBox = document.getElementById("difficultyBox");
+
+  //The boxes will be easy, medium, and hard, previously removed
+  difficultyBox.classList.remove("easy", "medium", "hard");
+
+  //slice function
+  difficultyBox.textContent = `Difficulty ${
+    level.charAt(0).toupperCase() + level.slice(1)
+  }`;
+
+  //apply the appropriate css for chosen level difficulty
 }
