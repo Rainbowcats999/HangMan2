@@ -27,3 +27,27 @@ h3 {
 .hard {
   background-color: rgb(216, 41, 41);
 }
+
+button.easy {
+  background-color: green;
+}
+
+button.easy:hover {
+  background-color: rgb(58, 255, 58);
+}
+
+button.medium {
+  background-color: yellow;
+}
+
+button.medium:hover {
+  background-color: rgb(252, 252, 150);
+}
+
+button.hard {
+  background-color: red;
+}
+
+button.hard:hover {
+  background-color: rgb(221, 126, 126);
+}
