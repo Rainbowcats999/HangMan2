@@ -28,26 +28,26 @@ h3 {
   background-color: rgb(216, 41, 41);
 }
 
-button.easy {
+.btn-success {
   background-color: green;
 }
 
-button.easy:hover {
+.btn-success:hover {
   background-color: rgb(58, 255, 58);
 }
 
-button.medium {
+.btn-warning {
   background-color: yellow;
 }
 
-button.medium:hover {
+.btn-warning:hover {
   background-color: rgb(252, 252, 150);
 }
 
-button.hard {
+.btn-danger {
   background-color: red;
 }
 
-button.hard:hover {
+.btn-danger:hover {
   background-color: rgb(221, 126, 126);
 }
