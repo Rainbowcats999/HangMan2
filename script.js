@@ -35,6 +35,7 @@ function startGame(level) {
   //Remove d-none from difficultyBox and gameArea
   document.getElementById("gameArea").classList.remove("d-none");
   document.getElementById("difficultyBox").classList.remove("d-none");
+
   //Add d-block to difficultyBox and gameArea
   document.getElementById("gameArea").classList.add("d-block");
   document.getElementById("difficultyBox").classList.add("d-block");
