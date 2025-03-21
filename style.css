@@ -17,10 +17,13 @@ h3 {
 }
 
 .easy {
+  background-color: rgb(52, 226, 52);
 }
 
 .medium {
+  background-color: rgb(235, 235, 35);
 }
 
 .hard {
+  background-color: rgb(216, 41, 41);
 }

@@ -63,7 +63,7 @@ function updatedifficultyDisplay(level) {
 
   //slice function
   difficultyBox.textContent = `Difficulty ${
-    level.charAt(0).toupperCase() + level.slice(1)
+    level.charAt(0).toUpperCase() + level.slice(1)
   }`;
 
   //apply the appropriate css for chosen level difficulty
