@@ -84,5 +84,8 @@ function guessLetter() {
 
   //check if input is valad between lowercase a-z
   if (!guessedLetter.match(/^[a-z]$/)) {
+    alert("Guess a letter from A-Z");
+    inputField.value = ""; //Clear input field
+    return; //Exit function
   }
 }
