@@ -97,4 +97,14 @@ function guessLetter() {
     //store guessed letter in guessedLetter array
     guessedLetters.push(guessedLetter);
   }
+
+  //Check if guessed letter is in the selected word
+  if (selectedWord.includes(guessedLetters)) {
+    correctGuess(guessedLetter);
+  } else {
+    wrongGuess(guessedLetter);
+  }
+
+  inputField.value = ""; //Clear input field
+  inputField.focus(); //Refocus input field for next guess
 }
