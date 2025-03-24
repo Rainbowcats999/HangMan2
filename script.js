@@ -17,63 +17,62 @@ const wordList = [
   "asexual",
 ];
 
-//setting time variables
+//setting Game Variables
 let selectedWord = "";
 let displayedWord = "";
-let wrongGuesses = 0;
+let wrongGuess = 0;
 let guessedLetters = [];
 const maxMistakes = 6;
 
 function startGame(level) {
   selectedWord = getRandomWord(level);
 
-  //create placeholder for the selected word
+  //Update Difficulty Display Div
+  updateDifficultyDisplay(level);
+
+  //Create the placeholder's for the selected word
   displayedWord = "_".repeat(selectedWord.length);
-  //display the selected word
+  //display the updated Word
   document.getElementById("wordDisplay").textContent = displayedWord
     .split("")
-    .join("space");
+    .join(" ");
 
-  //Update difficulty display box
-  updatedifficultyDisplay(level);
-
-  //Add d-block to the difficultySelection div
+  //Hide Difficulty Selection and Show Game Area & Difficulty Box
+  //Add d-none to the #difficultySelection div
   document.getElementById("difficultySelection").classList.add("d-none");
 
-  //Remove d-none from difficultyBox and gameArea
+  //remove d-none from #difficultyBox & #gameArea
   document.getElementById("gameArea").classList.remove("d-none");
   document.getElementById("difficultyBox").classList.remove("d-none");
 
-  //Add d-block to difficultyBox and gameArea
+  //add d-block to #difficultyBox & #gameArea
   document.getElementById("gameArea").classList.add("d-block");
   document.getElementById("difficultyBox").classList.add("d-block");
-
-  //select difficulty display box
 }
 
 function getRandomWord(level) {
   let filteredWords = wordList.filter((word) => {
-    if (level === "easy") return word.length <= 4; //Easy: 4 letters or less
-    if (level === "medium") return word.length > 4 && word.length < 8; //Medium: more than or equal to 7 letters
-    if (level === "hard") return word.length >= 8; //Hard: 8 letters or more
+    if (level === "easy") return word.length <= 4; // Easy: 4 or fewer letters
+    if (level === "medium") return word.length >= 5 && word.length <= 7; // Medium: 5-7 letters
+    if (level === "hard") return word.length >= 8; // Hard: 8+ letters
   });
-
-  //Select and return
+  //Select and return a random word from the filtered list
   return filteredWords[Math.floor(Math.random() * filteredWords.length)];
 }
 
-function updatedifficultyDisplay(level) {
+function updateDifficultyDisplay(level) {
   let difficultyBox = document.getElementById("difficultyBox");
 
-  //The boxes will be easy, medium, and hard, previously removed
+  //Remove any previous difficulty classes ('easy', 'medium', 'hard')
   difficultyBox.classList.remove("easy", "medium", "hard");
 
-  //slice function
-  difficultyBox.textContent = `Difficulty ${
+  //Set text & apply class dynamically using template literals
+  difficultyBox.textContent = `Difficulty: ${
     level.charAt(0).toUpperCase() + level.slice(1)
   }`;
 
-  //apply the appropriate css for chosen level difficulty
+  //apply the appropriate CSS style for chosen Difficulty
+  difficultyBox.classList.add(level);
 }
 
 function updatedifficultyDisplay(level) {}
@@ -87,5 +86,15 @@ function guessLetter() {
     alert("Guess a letter from A-Z");
     inputField.value = ""; //Clear input field
     return; //Exit function
+  }
+
+  //Check if the letter was already guessed or not using .includes()
+  if (guessedLetters.includes(guessedLetter)) {
+    alert('You already guessed "${guessedLetter}". Try a different letter!');
+    inputField.value = ""; //Clear input field
+    return;
+  } else {
+    //store guessed letter in guessedLetter array
+    guessedLetters.push(guessedLetter);
   }
 }
