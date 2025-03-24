@@ -38,6 +38,7 @@ h3 {
 
 .btn-warning {
   background-color: yellow;
+  border-color: yellow;
 }
 
 .btn-warning:hover {

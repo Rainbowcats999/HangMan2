@@ -75,3 +75,14 @@ function updatedifficultyDisplay(level) {
 
   //apply the appropriate css for chosen level difficulty
 }
+
+function updatedifficultyDisplay(level) {}
+
+function guessLetter() {
+  let inputField = document.getElementById("letterInput"); //Get input Field
+  let guessedLetter = inputField.ariaValueMax.toLowerCase(); //Convert input to lowercase
+
+  //check if input is valad between lowercase a-z
+  if (!guessedLetter.match(/^[a-z]$/)) {
+  }
+}
