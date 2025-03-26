@@ -108,3 +108,12 @@ function guessLetter() {
   inputField.value = ""; //Clear input field
   inputField.focus(); //Refocus input field for next guess
 }
+
+function wrongGuess(guessedLetter) {
+  //incerment the number of wrong guesses
+  wrongGuess++;
+  //add the number of guessedLetter to the array
+  document.getElementById("wrongLetters").textContent +=;
+  //Check to see if the number of wrong guesses is equal to the maximum mistakes
+
+}
