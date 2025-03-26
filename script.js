@@ -124,8 +124,18 @@ function wrongGuess(guessedLetter) {
 }
 
 function correctGuess(guessedLetter) {
-  let newDisplayedWord = ''
+  let newDisplayedWord = "";
 
+  for (let i = 0; i < selectedWord.length; ) {
+    if (selectedWord[i] === guessLetter) {
+      newDisplayedWord += guessedLetter;
+    } else {
+      newDisplayedWord += displayedWord[i];
+    }
+  }
 
-  for (let i = 0; i < selectedWord.length;)
+  displayedWord = newDisplayedWord;
+  document.getElementById("wordDisplay").textContent = displayedWord
+    .split("")
+    .join("");
 }
