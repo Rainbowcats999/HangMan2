@@ -20,7 +20,7 @@ const wordList = [
 //setting Game Variables
 let selectedWord = "";
 let displayedWord = "";
-let wrongGuess = 0;
+let wrongGuesses = 0;
 let guessedLetters = [];
 const maxMistakes = 6;
 
@@ -113,7 +113,19 @@ function wrongGuess(guessedLetter) {
   //incerment the number of wrong guesses
   wrongGuess++;
   //add the number of guessedLetter to the array
-  document.getElementById("wrongLetters").textContent +=;
+  document.getElementById("wrongLetters").textContent += `${guessedLetter}`;
+  document.getElementById("shamrock").src = "imgs/shamrock"`${
+    6 - wrongGuess
+  }.jpg`;
   //Check to see if the number of wrong guesses is equal to the maximum mistakes
+  if (wrongGuesses == maxMistakes) {
+    endGame(false);
+  }
+}
 
+function correctGuess(guessedLetter) {
+  let newDisplayedWord = ''
+
+
+  for (let i = 0; i < selectedWord.length;)
 }
