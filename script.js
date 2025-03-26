@@ -138,4 +138,8 @@ function correctGuess(guessedLetter) {
   document.getElementById("wordDisplay").textContent = displayedWord
     .split("")
     .join("");
+
+  if (displayedWord.include("_")) {
+    endGame(true);
+  }
 }
