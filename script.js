@@ -145,8 +145,9 @@ function correctGuess(guessedLetter) {
 }
 
 function endGame(won) {
-  if (won == true) {
-    setTimeout(() => alert("You win!"), 100);
+  if (won === true) {
+    setTimeout(() => alert("yeay you won"), 100);
+  } else {
   }
 }
 
