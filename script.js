@@ -139,7 +139,18 @@ function correctGuess(guessedLetter) {
     .split("")
     .join("");
 
-  if (displayedWord.include("_")) {
+  if (displayedWord.includes("_")) {
     endGame(true);
   }
+}
+
+function endGame(won) {
+  if (won == true) {
+    setTimeout(() => alert("You win!"), 100);
+  }
+}
+
+// /Restart Game - Reloads the page to reset everything
+function restartGame() {
+  location.reload();
 }
