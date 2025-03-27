@@ -1,7 +1,14 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
+  height: 100%;
+  width: 100%;
   background-image: url(imgs/cat.gif);
   background-repeat: no-repeat;
-  background-position: fixed;
+  background-position: center top;
   background-size: cover;
   font-family: "puntino", sans-serif;
   font-weight: 700;
