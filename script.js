@@ -79,7 +79,7 @@ function updatedifficultyDisplay(level) {}
 
 function guessLetter() {
   let inputField = document.getElementById("letterInput"); //Get input Field
-  let guessedLetter = inputField.ariaValueMax.toLowerCase(); //Convert input to lowercase
+  let guessedLetter = inputField.value.toLowerCase(); //Convert input to lowercase
 
   //check if input is valad between lowercase a-z
   if (!guessedLetter.match(/^[a-z]$/)) {
@@ -111,11 +111,11 @@ function guessLetter() {
 
 function wrongGuess(guessedLetter) {
   //incerment the number of wrong guesses
-  wrongGuess++;
+  wrongGuesses++;
   //add the number of guessedLetter to the array
   document.getElementById("wrongLetters").textContent += `${guessedLetter}`;
-  document.getElementById("shamrock").src = "imgs/shamrock"`${
-    6 - wrongGuess
+  document.getElementById("shamrock").src = `imgs/shamrock${
+    6 - wrongGuesses
   }.jpg`;
   //Check to see if the number of wrong guesses is equal to the maximum mistakes
   if (wrongGuesses == maxMistakes) {
