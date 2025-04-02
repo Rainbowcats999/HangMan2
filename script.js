@@ -26,6 +26,7 @@ const maxMistakes = 6;
 
 function startGame(level) {
   selectedWord = getRandomWord(level);
+  document.getElementById("gamediv").classList.remove("d-none");
 
   //Update Difficulty Display Div
   updateDifficultyDisplay(level);
@@ -155,3 +156,17 @@ function endGame(won) {
 function restartGame() {
   location.reload();
 }
+
+function sound(url) {
+  let audio = new Audio(url);
+  audio.play();
+}
+
+window.addEventListener("keydown", (event) => {
+  if (
+    event.key == "Enter" &&
+    document.getElementsByTagName("INPUT")[0].value != ""
+  ) {
+    guessLetter();
+  }
+});
