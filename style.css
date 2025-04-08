@@ -6,6 +6,7 @@ html {
 body {
   height: 100%;
   width: 100%;
+
   background-image: url(imgs/cat.gif);
   background-repeat: no-repeat;
   background-position: center top;
@@ -20,7 +21,7 @@ h1 {
 }
 
 h3 {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .easy {
@@ -66,4 +67,17 @@ h3 {
 
 .img {
   width: 400%;
+}
+
+img {
+  object-position: center;
+  object-fit: contain;
+}
+
+#difficultySelection {
+  background: white;
+  border-radius: 15%;
+  position: center;
+  height: 200px;
+  opacity: 80%;
 }
